@@ -383,7 +383,7 @@ function createMicrophoneAudioTrack(config) {
     };
   };
 }
-function createScreenVideoTrack(config, withAudio) {
+function createScreenVideoTrackHook(config, withAudio) {
   var createClosure = function createClosure() {
     try {
       return Promise.resolve(AgoraRTC__default.createScreenVideoTrack(config, withAudio)).then(function (_AgoraRTC$createScree) {
@@ -459,6 +459,6 @@ exports.createCustomAudioTrack = createCustomAudioTrack;
 exports.createCustomVideoTrack = createCustomVideoTrack;
 exports.createMicrophoneAndCameraTracks = createMicrophoneAndCameraTracks;
 exports.createMicrophoneAudioTrack = createMicrophoneAudioTrack;
-exports.createScreenVideoTrack = createScreenVideoTrack;
+exports.createScreenVideoTrack = AgoraRTC__default.createScreenVideoTrack;
 exports.default = AgoraRTC__default;
 //# sourceMappingURL=index.js.map
